@@ -17,3 +17,4 @@ Feature: Calculate the total price of the cart of telephone items for an identif
       | 0    | 2      | 0      | 1100  |
       | 0    | 0      | 1      | 900   |
       | 0    | 0      | 2      | 1800  |
+      | 10   | 10     | 10     | 24500 |
