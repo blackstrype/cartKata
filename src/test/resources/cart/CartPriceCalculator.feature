@@ -1,8 +1,8 @@
 Feature: Calculate the total price of the cart of telephone items for an identified professional or particulier client
 
-  Scenario Template: Professional clients with more than 10 million in turnover
+  Scenario Template: Professional clients with at least than 10 million in turnover
     Given the client is a Professional
-    And the Professional client's turnover is 10000001
+    And the Professional client's turnover is 10000000
     And there are <high> high-end telephones in the shopping cart
     And there are <middle> middle-end telephones in the shopping cart
     And there are <laptop> laptops in the shopping cart

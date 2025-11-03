@@ -5,6 +5,8 @@ import cart.model.Client;
 
 public class CartPriceCalculator {
 
+    public static final int THRESHOLD_ELITE_PRO_CLIENT_TURNOVER = 10000000;
+
     public static final int UNIT_PRICE_PRO_ELITE_HIGH_END_TELEPHONE = 1000;
     public static final int UNIT_PRICE_PRO_ELITE_MIDDLE_END_TELEPHONE = 550;
     private static final int UNIT_PRICE_PRO_ELITE_LAPTOP = 900;
@@ -13,7 +15,7 @@ public class CartPriceCalculator {
     private static final int UNIT_PRICE_PRO_LAPTOP = 1000;
 
     public static int calculateTotalPrice(Cart cart, Client client) {
-        if (client.getTurnover() > 10000000) {
+        if (client.getTurnover() >= THRESHOLD_ELITE_PRO_CLIENT_TURNOVER) {
             return cart.getHighEndTelephoneCount() * UNIT_PRICE_PRO_ELITE_HIGH_END_TELEPHONE
                     + cart.getMiddleEndTelephoneCount() * UNIT_PRICE_PRO_ELITE_MIDDLE_END_TELEPHONE
                     + cart.getLaptopCount() * UNIT_PRICE_PRO_ELITE_LAPTOP;
