@@ -11,3 +11,4 @@ Feature: Calculate the total price of the cart of telephone items for an identif
     Examples:
       | high | middle | laptop | total |
       | 0    | 0      | 0      | 0     |
+      | 1    | 0      | 0      | 1000  |
