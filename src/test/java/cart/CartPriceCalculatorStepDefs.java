@@ -55,4 +55,12 @@ public class CartPriceCalculatorStepDefs {
         Assertions.assertEquals(total, this.calculatedTotalPrice);
     }
 
+    @Given("the client is a Particulier")
+    public void theClientIsAParticulier() {
+        this.client = new Client();
+        this.client.setClientType(ClientType.PARTICULIER);
+        this.client.setFirstName("Jon");
+        this.client.setLastName("Smith");
+        this.cart = new Cart();
+    }
 }

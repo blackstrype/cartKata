@@ -37,3 +37,21 @@ Feature: Calculate the total price of the cart of telephone items for an identif
       | 0    | 0      | 1      | 1000  |
       | 0    | 0      | 2      | 2000  |
       | 10   | 10     | 10     | 27500 |
+
+  Scenario Template: Particular clients
+    Given the client is a Particulier
+    And there are <high> high-end telephones in the shopping cart
+    And there are <middle> middle-end telephones in the shopping cart
+    And there are <laptop> laptops in the shopping cart
+    When the price of the cart is calculated
+    Then the total price of their cart will be <total> euros
+    Examples:
+      | high | middle | laptop | total |
+      | 0    | 0      | 0      | 0     |
+      | 1    | 0      | 0      | 1500  |
+      | 2    | 0      | 0      | 3000  |
+      | 0    | 1      | 0      | 800   |
+      | 0    | 2      | 0      | 1600  |
+      | 0    | 0      | 1      | 1200  |
+      | 0    | 0      | 2      | 2400  |
+      | 10   | 10     | 10     | 35000 |

@@ -7,6 +7,9 @@ public class Client {
     private String TVANumber;
     private int turnover;
 
+    private String firstName;
+    private String lastName;
+
     public ClientType getClientType() {
         return clientType;
     }
@@ -45,5 +48,13 @@ public class Client {
 
     public void setTurnover(int turnover) {
         this.turnover = turnover;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
